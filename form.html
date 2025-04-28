@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        body {
+            background-color: #c9d6ff;
+            background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+        }
+        header{
+            font-size: 30px;
+            text-align: center;
+            margin: -1.20%;
+            color:aliceblue;
+            background-color:rgb(0, 0, 0);
+            font-family: serif;
+        }
+        form{
+            text-align: center;
+            color:blue;
+
+        }
+        
+        .container {
+            background: #fff;
+            width: 490px;
+            height:200px;
+            padding: 1.9rem;
+            margin: 50px;
+            border: radius 50px;
+            
+
+        }
+
+        div{
+            text-align: center;
+            font-size: 20px;
+            font-family: serif;
+            color:red;
+        }
+        
+
+    </style>
+
+</head>
+<body>
+    <header> Submit Your Details </header> <br> <br>
+<Div class="container">
+    <form onclick="btnsubmit()">
+        STUDENT NAME:- <input type="text" id="stdid" placeholder="Eg: Ram Bahadur "><br><br>
+        ADDRESS:- <input type="text" placeholder="Eg: Pokhara "><br><br>
+        <input type="Radio" name="Gender">Male<input type="Radio" name="Gender">Female <input type="Radio" name="Gender">Other<br><br>
+        file Upload:-<input type="file" id="File" name="file "> 
+    </form>
+        <p> Thank You</p>
+        <button type="submit" id="btnsave"> <b> <i> Submit</i></b></button>
+    
+</Div>
+<script>
+$(document).on("click","#btnsave" ,function(){
+    var stname=$("#stdid").val();
+    console.log(stname);
+
+})
+    //$('.stddata').val()
+   
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    
+</body>
+
+
+
+</html>
