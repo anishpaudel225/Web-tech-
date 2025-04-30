@@ -29,11 +29,25 @@ if ($_SERVER ["REQUEST_METHOD"]=="POST"){
     $email =$_POST ['password'];
 
     if (empty($name)){
-        echo "";
+        echo " please enter a username.";
         
+    }elseif (empty($password)) {
+        echo "Please enter a password"
+
+
     }
     else{
-        mysqli _close($conn);
+        $hash = password_hash ($passwod, PASSWORD_DEFAULT);
+        $sql= "insert into users (user, password) VALUES('$username', '$hash')":
+        
+        if (mysqli_query($conn, $sql)){
+            echo "New record created sucessfully";
+        }else {
+           echo "Error:" ,mysqli _close($conn);
+
+        }
+        
+
 
     }
 }

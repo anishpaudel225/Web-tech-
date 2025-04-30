@@ -1,12 +1,12 @@
 <?php
 
 include("connection.php");
+//$userid = "10";
+$username ="saron";
+$password ="1dvbuy3";
 
-$username ="sabin";
-$password ="1234543rtw";
-
-$sql = "INSERT INTO student (name, password)
-VALUES('$username' , '$password')";
+$sql = "INSERT INTO std_tbl ( name, password)
+VALUES('$username' , '$password' )";
 
 try{
     mysqli_query($conn, $sql);
